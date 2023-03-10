@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <script defer src="./app.js"></script>
+    <script defer src="https://kit.fontawesome.com/96a70be8ea.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="side-bar">
+                <div class="track">
+                    <div class="number active-track">1</div>
+                    <div class="track-info">
+                        <div class="step">STEP 1</div>
+                        <div class="info">Your info</div>
+                    </div>
+                </div>
+                <div class="track">
+                    <div class="number">2</div>
+                    <div class="track-info">
+                        <div class="step">STEP 2</div>
+                        <div class="info">Select plan</div>
+                    </div>
+                </div>
+                <div class="track">
+                    <div class="number">3</div>
+                    <div class="track-info">
+                        <div class="step">STEP 3</div>
+                        <div class="info">Add-ons</div>
+                    </div>
+                </div>
+                <div class="track">
+                    <div class="number">4</div>
+                    <div class="track-info">
+                        <div class="step">STEP 4</div>
+                        <div class="info">Summary</div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel">
+                <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <div class="personal">
+                                <h1 class="carousel-title">Personal info</h1>
+                                <p class="carousel-sub">Please provide a name, email address, and phone number.</p>
+                                <div class="input-box">
+                                    <div class="input-div">
+                                        <div class="input-top">
+                                            <label for="name">Name</label>
+                                            <p class="personal-input-check"></p>
+                                        </div>
+                                        <input class="name-input" id="name" placeholder="e.g. Stephen King" type="text">
+                                    </div>
+                                    <div class="input-div">
+                                        <div class="input-top">
+                                            <label for="email">Email Address</label>
+                                            <p class="personal-input-check"></p>
+                                        </div>
+                                        <input class="email-input" id="email" placeholder="e.g. stephenking@lorem.com" type="text">
+                                    </div>
+                                    <div class="input-div">
+                                        <div class="input-top">
+                                            <label for="number">Phone Number</label>
+                                            <p class="personal-input-check"></p>
+                                        </div>
+                                        <input class="number-input" id="number" placeholder="e.g. 1 234 567 8907" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="carousel-slide">
+                            <div class="Select-plan">
+                                <h1 class="carousel-title">Select your plan</h1>
+                                <p class="carousel-sub">You have the option of monthly or yearly billing.</p>
+    
+                                <div class="plans-container">
+                                    <div class="plans-div">
+                                        <div class="plans-box active-plan-box">
+                                            <div class="plans-img">
+                                                <img src="./images/icon-arcade.svg" alt="icon-arcade">
+                                            </div>  
+                                            <div class="plans-info">
+                                                <p class="plans-title">Arcade</p>
+                                                <p class="plans-cost">$9/mo</p>
+                                            </div>
+                                        </div>
+                                        <div class="plans-box">
+                                            <div class="plans-img">
+                                                <img src="./images/icon-advanced.svg" alt="icon-advanced">
+                                            </div>
+                                            <div class="plans-info">
+                                                <p class="plans-title">Advanced</p>
+                                                <p class="plans-cost">$12/mo</p>
+                                            </div>
+                                        </div>
+                                        <div class="plans-box">
+                                            <div class="plans-img">
+                                                <img src="./images/icon-pro.svg" alt="icon-pro">
+                                            </div>
+                                            <div class="plans-info">
+                                                <p class="plans-title">Pro</p>
+                                                <p class="plans-cost">$15/mo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plans-track-div">
+                                        <div class="monthly active-plan">Monthly</div>
+                                        <div class="plans-track">
+                                            <div class="track-div"></div>
+                                        </div>
+                                        <div class="yearly">Yearly</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <div class="add-ons">
+                                <h1 class="carousel-title">Pick Add Ons</h1>
+                                <p class="carousel-sub">Add-ons help enhance your gaming experience.
+                                </p>
+    
+                                <div class="addons-container">
+                                    <div class="addons-div">
+                                        <div class="addons-info">
+                                            <div class="addons-checkbox">
+                                                <input type="checkbox">
+                                            </div>
+                                            <div class="addons">
+                                                <p class="plans-title">Online service</p>
+                                                <p class="plans-cost">Access to multiplayer games</p>
+                                            </div>
+                                        </div>
+                                        <div class="addons-time">+$1/mo</div>
+                                    </div>
+                                    <div class="addons-div">
+                                        <div class="addons-info">
+                                            <div class="addons-checkbox">
+                                                <input type="checkbox">
+                                            </div>
+                                            <div class="addons">
+                                                <p class="plans-title">Larger storage</p>
+                                                <p class="plans-cost">Extra 1TB of cloud save</p>
+                                            </div>
+                                        </div>
+                                        <div class="addons-time">+$2/mo</div>
+                                    </div>
+                                    <div class="addons-div">
+                                        <div class="addons-info">
+                                            <div class="addons-checkbox">
+                                                <input type="checkbox">
+                                            </div>
+                                            <div class="addons">
+                                                <p class="plans-title">Customizable Profile</p>
+                                                <p class="plans-cost">Custom theme on your profile</p>
+                                            </div>
+                                        </div>
+                                        <div class="addons-time">+$2/mo</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            
+                        <div class="carousel-slide">
+                            <div class="summary">
+                                <h1 class="carousel-title">Finishing up</h1>
+                                <p class="carousel-sub">Double-check everything looks OK before confirming.
+                                </p>
+                                
+                                <div class="summary-box">
+                                    <div class="top-summary">
+                                        <div class="plan-summary">
+                                            <p class="plan-selected plans-title">Arcade <span>(Monthly)</span></p>
+                                        </div>
+                                        <div class="plan-price">$9/mo</div>
+                                    </div>
+                                    <div class="bottom-summary"></div>
+                                </div>
+    
+                                <div class="total-div">
+                                    <div class="total">Total <span>(per month)</span></div>
+                                    <div class="total-price">$9/mo</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide response">
+                            <div class="check-div">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h1>Thank you!</h1>
+                            <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com</p>
+                        </div>
+                </div>
+                
+                <div class="carousel-btn">
+                    <div class="back is-hidden">Go Back</div>
+                    <div class="next">Next Step</div>
+                    <div class="confirm">Confirm</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

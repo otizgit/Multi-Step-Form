@@ -97,8 +97,8 @@ main {
 }
 
 .step {
-    color: var(--CoolGray);
-    font-size: clamp(12px, .5vw, 20px);
+    color: var(--LightGray);
+    font-size: clamp(11px, .4vw, 20px);
     margin-bottom: clamp(5px, .5vw, 20px);
 }
 
@@ -302,9 +302,6 @@ main {
 .plans-box > * {
     pointer-events: none;
 }
-.plans-box:hover .plans-img img {
-    animation: rotate 1.5s linear infinite;
-}
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -368,6 +365,9 @@ main {
 }
 .active-plan-box {
     border: 1px solid var(--PurplishBlue);
+}
+.active-plan-box img {
+    animation: rotate 1.5s linear infinite;
 }
 
 .plans-track {

@@ -233,17 +233,23 @@ plansContainer.addEventListener("click", function (e) {
     trackState = !trackState;
   }
 
-  const activePlanBox = plansContainer.querySelector(".active-plan-box");
-  const plansTitle = activePlanBox.querySelector(".plans-title");
-  const activePlanCost = activePlanBox.querySelector(".plans-cost");
-  const activePlan = plansContainer.querySelector(".active-plan");
-
-  planSelected.innerHTML = `${plansTitle.innerText} <span>(${activePlan.innerText})</span>`;
-
-  planPrice.innerText = activePlanCost.innerText;
-
-  let slicedActivePlan = activePlan.innerText.slice(0, -2);
-  totalSpan.innerText = `(per ${slicedActivePlan.toLowerCase()})`;
+  plansBox.forEach(function(planBox) {
+    if (!planBox.classList.contains("active-plan-box")) {
+      return null;
+    } else {
+      const activePlanBox = plansContainer.querySelector(".active-plan-box");
+      const plansTitle = activePlanBox.querySelector(".plans-title");
+      const activePlanCost = activePlanBox.querySelector(".plans-cost");
+      const activePlan = plansContainer.querySelector(".active-plan");
+    
+      planSelected.innerHTML = `${plansTitle.innerText} <span>(${activePlan.innerText})</span>`;
+    
+      planPrice.innerText = activePlanCost.innerText;
+    
+      let slicedActivePlan = activePlan.innerText.slice(0, -2);
+      totalSpan.innerText = `(per ${slicedActivePlan.toLowerCase()})`;
+    }
+  })
 
   updatePrices();
 
@@ -312,8 +318,7 @@ function updatePrices() {
   const addonSummary = bottomSummary.querySelectorAll(".addon-summary");
 
   if (addonSummary.length !== 0) {
-    addonSummary.forEach(function (addon) {
-      addonsDiv.forEach(function (addDiv) {
+    addonSummary.forEach(function (addon) {      addonsDiv.forEach(function (addDiv) {
         const addonTime = addDiv.querySelector(".addons-time");
         const addonsTitle = addDiv.querySelector(".plans-title");
         const addonsSelected = addon.querySelector(".addon-selected");
@@ -359,6 +364,7 @@ function calculateTotalPrice() {
 
 calculateTotalPrice();
 
+// Clicking the confirm button:
 confirm.addEventListener("click", confirmedInput);
 function confirmedInput() {
   let carouselBtns = document.querySelector(".carousel-btn");

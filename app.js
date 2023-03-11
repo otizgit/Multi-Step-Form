@@ -377,7 +377,7 @@ function confirmedInput() {
     var x = window.matchMedia("(max-width: 1000px)");
     removeBtns(x);
   } else if (!validName && validEmail && validNumber) {
-    alert("Oops, seems the name input field is either empty or invalid.");
+    alert("Oops, seems the name input is either empty or invalid.");
     counter = 0;
     carousel();
   } else if (validName && !validEmail && validNumber) {
@@ -385,7 +385,7 @@ function confirmedInput() {
     counter = 0;
     carousel();
   } else if (validName && validEmail && !validNumber) {
-    alert("Oops, seems the number input field is either empty or invalid.");
+    alert("Oops, seems the number input is either empty or invalid.");
     counter = 0;
     carousel();
   } else {

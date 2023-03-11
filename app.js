@@ -361,6 +361,10 @@ calculateTotalPrice();
 
 confirm.addEventListener("click", confirmedInput);
 function confirmedInput() {
+  let carouselBtns = document.querySelector(".carousel-btn");
+
+  const planSelected = document.querySelector(".plan-selected");
+
   if (validName && validEmail && validNumber) {
     counter++;
     carousel();
@@ -370,7 +374,6 @@ function confirmedInput() {
 
     function removeBtns() {
       if (x.matches) {
-        let carouselBtns = document.querySelector(".carousel-btn");
         carouselBtns.classList.add("remove-btns");
       }
     }
@@ -392,5 +395,11 @@ function confirmedInput() {
     alert("Please enter all input fields.");
     counter = 0;
     carousel();
+  }
+  if (validName && validEmail && validNumber && planSelected.innerText === "") {
+    alert("Please select a plan");
+    counter = 1;
+    carousel();
+    carouselBtns.classList.remove("remove-btns");
   }
 }

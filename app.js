@@ -378,11 +378,19 @@ function confirmedInput() {
     removeBtns(x);
   } else if (!validName && validEmail && validNumber) {
     alert("Oops, seems the name input field is either empty or invalid.");
+    counter = 0;
+    carousel();
   } else if (validName && !validEmail && validNumber) {
     alert("Oops, seems the email input is either empty or invalid.");
+    counter = 0;
+    carousel();
   } else if (validName && validEmail && !validNumber) {
     alert("Oops, seems the number input field is either empty or invalid.");
+    counter = 0;
+    carousel();
   } else {
     alert("Please enter all input fields.");
+    counter = 0;
+    carousel();
   }
 }
